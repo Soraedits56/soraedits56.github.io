@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Nightmares II - About</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #000;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #00aaff;
+        }
+        .menu-icon {
+            font-size: 24px;
+            display: none;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 120px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        .content img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 1s ease-in-out;
+        }
+        .about-text {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: slideUp 1.5s ease-in-out;
+        }
+        .about-text h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #00aaff;
+        }
+        .about-text p {
+            line-height: 1.8;
+            font-size: 18px;
+            color: #ddd;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header nav {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-icon {
+                display: block;
+            }
+            header nav a {
+                margin: 10px 0;
+            }
+            .content img {
+                width: 95%;
+            }
+            .about-text {
+                width: 95%;
+            }
+            .about-text h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="related.html">Related Games</a>
+                <a href="contact.html">Contact</a>
+            </div>
+			<div class="auth-links">
+                <a href="googlelogin.html">Sign in with <img src="google.png" alt="Google" width="24"></a>
+                <a href="facebooklogin.html">Sign in with <img src="facebook.png" alt="Facebook" width="24"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <img src="ln2.jpg" alt="Little Nightmares II">
+        <div class="about-text">
+            <h1>ABOUT LITTLE NIGHTMARES II</h1>
+            <p>
+                Little Nightmares II is a puzzle-platform horror adventure game developed by Tarsier Studios and published by Bandai Namco Entertainment. 
+                It may be played as a self-contained experience. The story follows Mono, who must work together with Six, the protagonist from the previous game, 
+                to survive the horrors of the Pale City and discover its dark secrets.
+            </p>
+            <p>
+                The game was released for Google Stadia, Nintendo Switch, PlayStation 4, Windows, and Xbox One on 11 February 2021. 
+                An upgraded version, titled Little Nightmares II: Enhanced Edition, was developed by Supermassive Games and released on 25 August 2021 
+                for PlayStation 5, Windows, and Xbox Series X/S.
+            </p>
+            <p>
+                The game received very positive reviews upon release, with critics praising its graphics, atmosphere, gameplay, and sound, while a few 
+                criticized its controls and some unintentional glitches. Within one month of release, the game had sold one million units worldwide. 
+                A sequel, Little Nightmares III, is in development by Supermassive for a release sometime in 2025.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Little Nightmares II | All Rights Reserved
+    </footer>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', () => {
+            const navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(link => {
+                if (link.style.display === 'block') {
+                    link.style.display = 'none';
+                } else {
+                    link.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

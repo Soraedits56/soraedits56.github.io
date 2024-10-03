@@ -1,0 +1,224 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eaeaea;
+    background-color: #0c1a2b;
+    overflow-x: hidden;
+}
+
+/* Smooth transitions for hover effects */
+a, button {
+    transition: all 0.3s ease;
+}
+
+header {
+    background-color: #263543;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Animated hamburger menu */
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px;
+    position: relative;
+}
+
+/* Hover effect on navigation links */
+.nav-links li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #f79c42;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f79c42;
+}
+
+.auth-links a {
+    color: #eaeaea;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.auth-links img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+/* Content layout */
+.content {
+    display: flex;
+    padding: 60px;
+    justify-content: space-between;
+}
+
+.about-game {
+    width: 30%;
+    background-color: #344a5f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInLeft 1s forwards;
+}
+
+.about-game h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f79c42;
+}
+
+.about-game p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.game-info {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #1a2739;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInRight 1s forwards;
+}
+
+.game-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f79c42;
+}
+
+.game-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #eaeaea;
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect for image zoom */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #263543;
+    color: #eaeaea;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-game {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .game-info {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

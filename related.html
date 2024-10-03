@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Nightmares II</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #00aaff;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #282828;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #f0f0f0;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('path_to_your_image/little_nightmares_2_bg.jpg') center/cover no-repeat;
+            color: #00aaff;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .main-content img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .main-content img:hover {
+            transform: scale(1.05);
+        }
+        
+        .related-games {
+            padding: 50px 20px;
+            background-color: #222;
+        }
+        .related-games h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .game-card {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .game-card:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .games-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .game-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        .sign-in {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+        .sign-in a {
+            background-color: #555;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .sign-in a:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="related.html">Related Games</a>
+            <a href="contact.html">Contact</a>
+        </div>
+         <div class="auth-links">
+                <a href="googlelogin.html">Sign in with <img src="google.png" alt="Google" width="24"></a>
+                <a href="facebooklogin.html">Sign in with <img src="facebook.png" alt="Facebook" width="24"></a>
+            </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Little Nightmares II</h1>
+        <img src="ln2.jpg" alt="Little Nightmares II">
+    </div>
+
+    <div class="related-games" id="related-games">
+        <h2>Related Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <a href="limbo.html">
+                    <img src="limbo.jpg" alt="Limbo">
+                    <p>LIMBO</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="among_the_sleep.html">
+                    <img src="sleep.jpg" alt="Among the Sleep">
+                    <p>AMONG THE SLEEP</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="the_swapper.html">
+                    <img src="swapper.jpg" alt="The Swapper">
+                    <p>THE SWAPPER</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="detention.html">
+                    <img src="Detention.jpg" alt="Detention">
+                    <p>DETENTION</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="unravel.html">
+                    <img src="Unravel.jpg" alt="Unravel">
+                    <p>UNRAVEL</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
